@@ -14,6 +14,7 @@ const generateTitle = () => {
         title += randomChar();
     }
     document.title = title;
+    document.querySelector("#title").innerHTML += title + "</br>"
 }
 
 const generatePage = () => {
