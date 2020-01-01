@@ -92,14 +92,15 @@ const attachListeners = () => {
             state[page] = next;
         }
         document.querySelector("#page-num").innerHTML = page;
-        document.querySelector("#title").innerHTML = "";
+        //document.querySelector("#title").innerHTML = "";
         document.querySelector("#text").innerHTML = "";
-        generateTitle();
+        //generateTitle();
         generatePage();
     });
 }
 
 window.onload = () => {
+    generateTitle();
     hexstring = window.prompt("Enter seed or do nothing");
     if (hexstring) {
         let seednum = hexstring.hashCode();
@@ -107,6 +108,5 @@ window.onload = () => {
         srand(seednum);
     }
     attachListeners();
-    generateTitle();
     generatePage();
 }

@@ -7,15 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Placeholder</title>
     <script src="babel.js"></script>
+    <link rel="stylesheet" type="text/css" href="babel.css">
 </head>
 
 <body>
-    <h3 id="title" style="text-align: center; font-weight: bold;"></h3>
-    <div id="text" style="text-align: center; font-family: monospace; font-size: 1rem"></div>
-    <br>
-    <button id="page-next">Smack me for next page</button>
-    <button id="page-back">Smack me for back page</button>
-    <p>You are on page <span id="page-num">1</span></p>
+    <div class="flex">
+        <div>
+            <button id="page-back">Previous page</button>
+        </div>
+        <div>
+            <h3 id="title" style="text-align: center; font-weight: bold;"></h3>
+            <div id="text" style="text-align: center; font-family: monospace; font-size: 1rem"></div>
+            <br>
+            <p style="text-align: center;">You are on page <span id="page-num">1</span></p>
+        </div>
+        <div>
+            <button id="page-next">Next page</button>
+        </div>
+    </div>
 </body>
 
 </html>
