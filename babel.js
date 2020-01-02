@@ -100,12 +100,16 @@ const attachListeners = () => {
 }
 
 window.onload = () => {
-    generateTitle();
-    hexstring = window.prompt("Enter seed or do nothing");
+    hexstring = window.prompt("Enter the name of a book (max chars: 25), or open random");
     if (hexstring) {
+        if (hexstring.length > 25) hexstring = hexstring.substring(0, 25);
+        document.title = hexstring;
+        document.querySelector("#title").innerHTML += hexstring + "</br>"
         let seednum = hexstring.hashCode();
         if (seednum < 0) seednum = -seednum;
         srand(seednum);
+    } else {
+        generateTitle();
     }
     attachListeners();
     generatePage();
