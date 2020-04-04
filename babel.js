@@ -92,9 +92,7 @@ const attachListeners = () => {
             state[page] = next;
         }
         document.querySelector("#page-num").innerHTML = page;
-        //document.querySelector("#title").innerHTML = "";
         document.querySelector("#text").innerHTML = "";
-        //generateTitle();
         generatePage();
     });
 }
@@ -103,7 +101,7 @@ window.onload = () => {
     hexstring = window.prompt("Enter the name of a book (max chars: 25), or open random");
     if (hexstring) {
         if (hexstring.length > 25) hexstring = hexstring.substring(0, 25);
-        document.title = hexstring;
+        document.title = `The Library of Babel - ${hexstring}`;
         document.querySelector("#title").innerHTML += hexstring + "</br>"
         let seednum = hexstring.hashCode();
         if (seednum < 0) seednum = -seednum;
